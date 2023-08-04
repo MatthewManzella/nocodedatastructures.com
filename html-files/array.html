@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Array</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/array/arraycover1.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    A collection of elements stored together in a list-like format. There are two main types of arrays:
+    <div style="text-align: center;">
+    <ol style="padding-left: 20%; display: inline-block; text-align: left;">
+      <li style="padding-left: 5%;"><u>Static Array:</u> An array whose number of elements cannot be changed (values of elements already in the array can be changed, but nothing can be added/removed/inserted).</li>
+      <br>
+      <li style="padding-left: 5%;""><u>Dynamic Array:</u> An array whose number of elements can be changed (elements can be changed, added, inserted, or removed in any way).</li>
+    </ol>
+    </div>
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Other common names for dynamic arrays:</b></u>
+    <div style="text-align: center;">
+    <ul style="display: inline-block; text-align: left;">
+      <li>List</li>
+      <li>ArrayList</li>
+      <li>Vector</li>
+    </ul>
+    </div>
+    </p>
+    <br>
+  </div>
+  <div>
+    <br>
+    <p><u style="font-size: 20px;"><b>Basic Dynamic Array Operations:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Adding an element. By default, adding an element to an array places it at the end. If you would like to add it at another location, see operation #2.</li>
+        <img class="image" style="width: 700px;" src="../images/array/arrayaddition.jpg">
+        <li style="padding: 50px; font-weight: normal;">Inserting an element. Elements to the right of the insertion location are shifted right one spot.</li> <img class="image" style="width: 700px;"      src="../images/array/arrayinsertion.jpg">
+        <li style="padding: 50px; font-weight: normal;">Removing an element. Elements to the right of the removal location are shifted left one spot.</li> <img class="image"
+          style="width: 700px;" src="../images/array/arrayremoval.jpg">
+        <li style="padding: 50px; font-weight: normal;">Changing an element (this one works for static arrays too). The element is simply changed in place. This is commonly referred to as "setting" an element.</li> <img class="image"
+          style="width: 700px;" src="../images/array/arraychange.jpg">
+      </ol>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Arrays are indexed. This means that every element within the array has a number to represent its position, which can be used for retrieval of elements. The first element is considered to be at index 0, second element at index 1, third at index 2, and so on. Elements may switch indices due to shifting places from insertion, addition, or deletion of elements as shown above.</p>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Storing elements for very easy access.</li>
+      <li>Mathematical operations.</li>
+      <li>Implementing other data structures.</li>
+    </ul>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Other Similar Data Structures: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li><u>Multi-Dimensional Array:</u> An array that is declared so that it has many dimensions (2D, 3D, ...). For example, an array of initial size 7 with each element being another array with size 7 would result in a 2D array with 49 total elements. These could be visualized using a 7x7 grid. Another example is a 3D array, which could have 7 initial elements, each being an array of 7 elements, with each of those elements being another array of 7 elements! This would result in 343 total elements that can be visualized in a 7x7x7 cube-shape! </li>
+      <br>
+      <li><u>Tuple:</u> An array in which nothing can be changed after declaration. No insertions, additions, deletions, or swapping of any elements is permitted.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

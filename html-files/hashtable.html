@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Hash Table</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/hashtable/hashcover.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    A methodically stored collection of corresponding keys and values. Every key has a meaningful value that it is linked to (and typically meant to retrieve) and both are stored at a calculated location called a hash index.
+  </p>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Other common names for hash tables (some features may differ slightly from hash table):</b></u>
+    <div style="text-align: center;">
+    <ul style="display: inline-block; text-align: left;">
+      <li>Map</li>
+      <li>Dictionary</li>
+      <li>Hash Map</li>
+      <li>Associative Array</li>
+    </ul>
+    </div>
+    </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life Example:</b></u>
+    Think of hash tables as warehouse stores like Costco or Sam's Club. Every section in the store (outdoors, bakery, frosen foods, etc.) can be thought of as a hash index. The name of every item in the store can be thought of as a bunch of keys and the physical content of each item is the equivalent of a value. The placement of each item depends on its name, which relates it to a specified hash index (section in the store). In that section, the key (name of the item) and value (the physical item) are placed and stored.
+    </p>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <p><u><b>Basic Properties: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li><b><u>Hash Index:</u></b> The index at which a particular key/value pair is stored assuming no hash collision (see fun fact). This index is calculated via a hash function, an expression that uses the name of the key to calculate a place (index) to store the pair at.</li>
+      <br>
+      <li><b><u>Key:</u></b> The element needed to access the value stored behind it. Keys tend to be items or names. An example is an employee at a store's name. <u>No two keys can be the same.</u></li>
+      <br>
+      <li><b><u>Value:</u></b> The element stored behind a key. Values tend to be more specific information about the keys. An example is the employee mentioned above's ID number. <u>Unlike keys, two different values can be the same.</u></li>
+    </ul>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p><u style="font-size: 20px;"><b>Basic Hash Table Operations:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Adding a key/value pair. This is referred to as "putting" a pair into the hashtable.</li>
+        <img class="image" style="width: 700px;" src="../images/hashtable/hashadd.jpg">
+        <li style="padding: 50px; font-weight: normal;">Removing a key/value pair from the hashtable. This is done by removing the key (the value is linked to the key so it is automatically deleted as well).</li> <img class="image" style="width: 700px;"      src="../images/hashtable/hashremove.jpg">
+        <li style="font-weight: normal; padding: 50px;">Changing the value of a key already in the hashtable.</li>
+        <img class="image" style="width: 700px;" src="../images/hashtable/hashtableput2.jpg">
+      </ol>
+    </div>
+    <br>
+  </div>
+    <div style="background-color: #FFD27F;">
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Despite hash tables being resizable, it is possible for a hash function to generate the same hash index for two different key/value pairs. This is a dilemma called hash collision. There are two common solutions to hash collision: </p>
+      <ol style="margin-left: 15%; font-weight: normal;">
+        <li style="padding-bottom: 20px;"><u>Separate Chaining:</u> The key/value pair is stored at the initially calculated hash index but as a node in a Linked List containing the key/value pair(s) that were already there.</li>
+        <img class="image" style="width: 700px;"      src="../images/hashtable/sepchaining.jpg">
+        <br>
+        <li><u>Open Addressing:</u> The key/value pair is inserted at the closest empty hash index if it exists.</li>
+      </ol>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Low level compiler/interpreter operations.</li>
+      <li>Cryptography/data security.</li>
+      <li>Spell check software.</li>
+    </ul>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Other Similar Data Structures: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li><u>Hash Set:</u> A hash table that mimics a set by only storing unique keys behind hash indices (not key/value pairs with unique keys like a regular hash table).</li>
+      <br>
+      <li><u>Hash Tree:</u> A <a href="heap.html">tree</a> that uses hashing to determine storage location for key/value pairs.</li>
+      <br>
+      <li><u>Linked Hash Map:</u> A hash map where key/value pairs are linked together (via a <a href="linkedlist.html">Linked List</a>) based on the order they were inserted regardless of assigned storage location.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

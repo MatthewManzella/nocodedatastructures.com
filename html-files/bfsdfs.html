@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Breadth-First Search/Depth-First Search</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/bfsdfs/dfs.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    Two processes designed to visit all nodes in a <a href="graph.html">graph</a> or <a href="heap.html">tree</a> data structure. A breadth-first search accomplishes this by exploring local nodes first before expanding outwards while a depth-first search focuses on following edges as far as possible before returning to explore previously reached nodes. See below for an example of each.
+    <br>
+    <br>
+    <div style="background-color: #ADD8E6;">
+      <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life Example:</b></u>
+    Imagine you're going for a walk. You start at your house, head to the park, and then go to the store. When you get to the store, you realize that your wallet is gone! Performing a breadth-first search would mean that you look for it at/near the store and then slowly retrace your steps back in the way you came from. A depth-first search would mean going as "deep" down your path as possible and then retracing your steps from there. This translates to walking all the way back towards your house (looking for the wallet a little bit along the way), looking for your wallet at home, and then tracing your steps back towards the store.</p>
+  <br>
+  </p>
+    </div>
+  <div>
+    <br>
+    <p><u style="font-size: 20px;"><b>Procedures for BFS/DFS starting from Node A:</b></u></p>
+    <p style="padding-left: 20px;"><u>Note:</u> Depending on how the BFS/DFS is implemented, the children of a node could be explored left to right or right to left. In the examples below, we will explore left to right.</p>
+    <div style="margin-left: 20px;">
+      <p style="display: flex; justify-content: center;"><b>Initial Graph</b></p>
+        <img class="image" style="width: 400px;" src="../images/bfsdfs/bfsdfsinitial.jpg">
+       <p style="padding-top: 50px;"><b>Breadth-First Search: </b> A is the starting node. Its only connection is B, so B is visited next. After B, D is visited due to it being the left-most child of B (see note above). The visit to D is followed by a visit to E and then C, the middle and right child nodes of B (notice that we explored all nodes directly connected to B before advancing any further). After B has been completely explored, D is checked for connections because it was the third node visited (after A and B - both completely explored already). D has no further connections so E is explored next due to it being the fourth overall node visited. E has one connection: F. After exploring E, C and F are explored in that order. Since neither have child nodes, the process is finished.</p>
+        <img class="image" style="width: 400px;" src="../images/bfsdfs/bfs.jpg">
+      <div style="display: flex; justify-content: center;">
+      <p><u>Order:</u> A    B    D    E    C    F</p>
+      </div>
+      <p style="padding-top: 50px;"><b>Depth-First Search: </b> A is the starting node. Its only connection is B, so B is visited next. After B, D is visited due to it being the left-most child of B (see note above). The visit to D is followed by a visit to E (the next child node of B) due to D having no further connections. After E has been visited, E's child F is visited. Since F and E have no more connections, the search returns to B which has one more connection: C. Because C has no child nodes, the process is finished.</p>
+        <img class="image" style="width: 400px;" src="../images/bfsdfs/dfs.jpg">
+      <div style="display: flex; justify-content: center;">
+      <p><u>Order:</u> A    B    D    E    F    C</p>
+      </div>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #1:</b></u> A breadth-first search is implemented using a <a href="queue.html">queue</a>. This is because a queue's "first in first out" principal helps keep track of nodes that are within reach and releases them in an order that ensures local nodes are being visited first.</p>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #2:</b></u> A depth-first search is implemented using a <a href="stack.html">stack</a>. This is because a stack's "last in first out" principal helps keep track of nodes that have already been visited and releases them in an order that ensures their connections are being explored to maximum depth before returning to previous nodes.</p>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Social network analysis.</li>
+      <li>Finding the shortest path between two nodes (BFS).</li>
+      <li>Navigating mazes (DFS).</li>
+    </ul>
+    <br>
+  </div>
+</body>
+</html>

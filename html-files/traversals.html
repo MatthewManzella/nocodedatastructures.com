@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Pre/In/Post-Order Traversal</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/traversals/traversal1.jpg">
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    Modified <a href="bfsdfs.html">depth-first searches</a> that are used to explore and process all nodes in a <a>binary tree</a>. The order the nodes are reached in is the same for all three types, the only difference is when the nodes are processed. See below for an explanation.
+    <br>
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p><u style="font-size: 20px;"><b>Procedures for Pre/In/Post-Order Traversals:</b></u></p>
+    <div style="margin-left: 20px;">
+      <p style="display: flex; justify-content: center;"><b>Traversed Binary Tree</b></p>
+      <p style="padding-left: 20px;">Below is the order that preorder, inorder, and postorder traversals all follow when visiting nodes in binary trees (depth-first). As mentioned above, the only difference between the three traversals is when the node is processed. There are no repeats in these traversals, meaning that every node can only be processed once. </p>
+        <img class="image" style="width: 400px;" src="../images/traversals/traversal1.jpg">
+       <p style="padding-top: 50px;"><b>Preorder Traversal: </b> Nodes are processed the second they are reached.</p>
+      <li style="padding-left: 35px;">Preorder processing order: A B C D E F G</li>
+        <br>
+      <p style="padding-top: 50px;"><b>Inorder Traversal: </b> Nodes are processed after their entire left subtree (anything connected to the bottom left of the node and beyond) is explored. If the node doesn't have a left subtree, it is processed automatically.</p>
+      <li style="padding-left: 35px;">Inorder processing order: C B D A F E G</li>
+      <br>
+      <p style="padding-top: 50px;"><b>Postorder Traversal: </b> Nodes are processed after their entire left AND right subtrees (anything connected below the node and beyond) is explored. If the node doesn't have a right subtree, it is processed automatically once the left subtree has been explored completely.</p>
+      <li style="padding-left: 35px;">Postorder processing order: C D B F G E A</li>
+      <br>
+      </div>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> An inorder traversal of a <a href="bst.html">binary search tree</a> always results in elements being sorted in ascending order.</p>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Computer memory operations.</li>
+      <li>Evaluating mathematical expressions.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+</html>

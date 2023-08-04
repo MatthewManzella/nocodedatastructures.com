@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Shell Sort</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/shellSort/shellsort2.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u
+      style="font-size: 20px;"><b>Definition:</b></u>
+    A process designed to sort an unordered set of linear data into either ascending order (lowest to highest) or
+    descending order (highest to lowest). This is done by creating a gap size equal to half the length of the list and then swapping elements that are [insert gap size] units apart and out of order. Everytime an entire round of the list has been complete, the gap is divided in half and the process is repeated until the gap size is equal to 1.
+  </p>
+    <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p><u style="font-size: 20px;"><b>Procedure for ASCENDING Shell Sort:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Divide the length of the list by 2 in order to find the initial gap size. If the resulting number is a decimal, round it down to the nearest whole number. After finding the gap size, correlate all elements that are [insert gap size] apart from each other.
+          <br>
+          <br>
+          <b>Note: </b> If the list below had an additional element at the end, it would be marked as part of the green group. 
+          <br>
+        </li>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort1.jpg">
+        <li style="padding: 50px; font-weight: normal;">If any of the corresponding elements are out of order, swap them <a href="insertionSort.html">(insertion sort)</a>.</li> <img class="image" style="width: 700px;"
+          src="../images/shellSort/shellsort2.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort3.jpg">
+        <li style="padding: 50px; font-weight: normal;">Divide the gap size by 2 again. If the resulting number is a decimal, round it down to the nearest whole number. After finding the gap size, correlate all elements that are [insert gap size] apart from each other. Perform an <a href="insertionSort.html">insertion sort</a> on each of the correlated lists (shared colors) so that they are in the correct order.</li>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort4.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort5.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort6.jpg">
+        <br>
+      <li style="padding: 50px; font-weight: normal;">Repeat step 3. Now that the gap size is 1, a basic <a href="insertionSort.html">insertion sort</a> is performed and then the data is guaranteed to be sorted.</li>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort7.jpg">
+        <br>
+        <b style="font-size: 20px; display: flex; justify-content: center;">(<a href=insertionSort.html>Insertion Sort</a>)</b>
+        <br>
+        <img class="image" style="width: 700px;" src="../images/shellSort/shellsort8.jpg">
+      </ol>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #1:</b></u> It is considered usual to choose your own gap size sequence for shell sort rather than just dividing by 2 every round. This could potentially improve the speed of the algorithm. A common choice is the Knuth Sequence, where the expression (3^k-1)/2 (k = the round you are in) dictates the gap size until the result exceeds the length of the data being sorted.
+      <br>
+      <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #2:</b></u> Shell sort isn't named after a shell to describe its sorting strategy, it's named after the algorithm's inventor Donald Shell.
+      <br>
+    </p>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Sorting small to medium datasets.</li>
+    </ul>
+    <br>
+    <p class="subtitle";><b>Note: </b> Other algorithms such as <a href="quickSort.html">quick sort</a> and <a href="mergeSort.html">merge sort</a> tend to be preferred over shell sort for most operations.</p>
+    <br>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Deque</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/deque/dequecover.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    A collection of elements that are stored next to each other in a line. Elements can only be inserted and deleted from the ends of the structure. Short for double ended <a href="queue.html">queue</a>. 
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life Example:</b></u>
+    Think of an NFL game. Before the ball is snapped, linemen from both teams are huddled right by the ball. Players on each end are standing behind the linemen and even more players are standing behind the second line. When the ball is snapped and everyone jumps towards each other, a deque is created. Players can join or leave the pile from the very outside but can't just show up in the middle.
+  <br>
+   <br>
+      <br>
+      <p class="subtitle"><b><u style="font-size: 20px;">Note:</u></b> The first element in a deque (farthest left) is referred to as the "front". The last element in a deque (farthest right) is referred to as the "rear" or "back".</p>
+    <br>
+    </p>
+  </div>
+  <div>
+    <br>
+    <p><u style="font-size: 20px;"><b>Basic Deque Operations:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+          <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Pushing an element onto the front or rear. An element is added to the deque at the specified end and becomes the front/rear.</li>
+        <img class="image" style="width: 700px;" src="../images/deque/dequepush.jpg">
+        <li style="padding: 50px; font-weight: normal;">Popping an element from the front or rear. The outermost element at the specified side is removed from the deque and the closest element in line becomes the front/rear.</li> <img class="image" style="width: 700px;" src="../images/deque/dequepop.jpg">
+      </ol>
+    </div>
+    <br>
+  </div>
+    <div style="background-color: #ADD8E6;">
+      <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Deque is pronounced "deck" not "DQ".</p>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Data stream processing tasks.</li>
+      <li>Implementing advanced <a href="graph.html">graph</a> algorithms.</li>
+      <li>Implementing other data structures.</li>
+    </ul>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Other Similar Data Structures: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li><u>Linked Deque:</u> A deque in which elements are linked to their neighbors via a <a href="linkedlist.html">doubly linked list</a>.</li>
+      <br>
+      <li><u>Block Deque:</u> A deque that stores collections of elements at each slot rather than individual elements at for the sake of efficiency.</li>
+      <br>
+      <li><u>Circular Deque:</u> A deque in which elements are organized in a circle rather than a line so that less memory is wasted at the expense of constant front/rear insertions and deletions.</li>
+      <br>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

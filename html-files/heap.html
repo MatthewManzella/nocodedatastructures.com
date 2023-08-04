@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Binary Tree/Heap</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/heap/heapcover.jpg">
+  <p style="text-align: center;"><b>A Binary Max Heap</b></p>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u
+      style="font-size: 20px;"><b>Definition:</b></u>
+    A binary tree is a data structure in which each node (piece of data) has 0, 1, or 2 other nodes that it is pointing towards in a
+    tree-like structure (see above). A binary heap is a specific type of binary tree in which certain elements are filtered
+    towards the top of the structure. There are two main types of binary heaps:
+  </p>
+  <ol style="padding-left: 20%; display: inline-block; text-align: left;">
+    <li style="padding-left: 5%;"><u>Binary Max Heap:</u> A binary tree in which the greater elements are filtered towards the
+      top. Every node's value is greater than the values of all the other individual nodes that stem from underneath it.</li>
+    <br>
+    <li style="padding-left: 5%;""><u>Binary Min Heap:</u> A binary tree in which the smaller elements are filtered towards the top. Every node's value is less than the values of all the other nodes that stem from underneath it.</li>
+    <br>
+    </ol>
+  <br>
+  <div style=" background-color: #ADD8E6;">
+      <br>
+      <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life
+            Example:</b></u>
+        To envision a typical binary tree/heap (min heap for this example), think of a reverse family tree in terms of
+        age. You are the youngest in the family and therefore are at the top of the tree. You were born from your two
+        parents, who will be the two nodes that your node points towards. After this each of your parents will point
+        towards their parents and so on. In summary, any given node is smaller than all nodes directly under it (you
+        can't be older than your own parents or grandparents!) making this a min heap.
+      </p>
+      <br>
+      </div>
+      <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+        <p><u><b>Basic Properties (See operations section below for applications): </b></u></p>
+        <ul style="margin-left: 50px; font-weight: normal;">
+          <li><b><u>Node:</u></b> An individual piece of data in a tree. An example is the blue circle with a 15 in it
+            in
+            the picture above.</li>
+          <br>
+          <li><b><u>Root Node:</u></b> The top node in a tree where all other nodes diverge from. 50 is the root node in
+            the
+            max heap above.</li>
+          <br>
+          <li><b><u>Parent/Child Node:</u></b> A parent node has at least one node connected directly below it. A child
+            node
+            is a node directly below a parent. In the max heap above, 35 is a child node to 50 but also a parent with
+            child nodes
+            22 and 9.
+            <br>
+            <br>
+          <li><b><u>Edge:</u></b> An arrow that connects a parent node to its child node(s).</u></li>
+          <br>
+          <li><b><u>Leaf Node:</u></b> Any nodes that have no child nodes. 8 is a leaf node in the max heap above.</li>
+          <br>
+          <li><b><u>Subtree:</u></b> A smaller tree within the initial binary tree/heap that starts from a parent node
+            besides the root node.</li>
+          <br>
+          <li><b><u>Height:</u></b> The number of direct edges from the root node to any node given. The height of 8 in
+            the
+            max heap above is 2.</u></li>
+        </ul>
+        <br>
+      </div>
+      <div style="background-color: #ADD8E6;">
+        <br>
+        <p><u style="font-size: 20px;"><b>Basic Max Heap Operations:</b></u></p>
+        <p style="padding: 15px;"><u>Note:</u> Min heaps have the same exact procedures as below but checking for nodes being less than those below them rather than greater.</p>
+        <div style="margin-left: 50px;">
+          <ol style="line-height: 2; font-size: 16px;">
+            <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Inserting a node. This is done by
+              first entering the node directly to the right of the right-most node on the bottom level (if the bottom level is full, insert it as the left child node of the left-most node of the bottom level). The node
+              is then shifted directly upwards as many times as needed so that max heap properties are satisfied, meaning that all nodes are greater than all those stemming from below them. This means that if big enough, a value could be swapped all the way up to become the root node.</li>
+            <img class="image" style="width: 700px;" src="../images/heap/heapinsert.jpg">
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapinsert2.jpg">
+            <li style="padding-bottom: 15px; padding-top: 50px; font-weight: normal;">Removing a node. In a heap structure, this is typically done to the root node in order to remove the absolute extreme of the tree data set. The process involves swapping the node to be removed with the right-most node at the bottom level of the tree. After this swap, the node to be removed (now in a leaf node position) is removed. The node that was swapped is shifted directly downwards as many times as needed so that max heap properties are satisfied, meaning that all nodes are greater than all those stemming from below them.</li>
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapremoval1.jpg">
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapremoval2.jpg">
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapremoval3.jpg">
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapremoval4.jpg">
+            <br>
+            <img class="image" style="width: 700px;" src="../images/heap/heapremoval5.jpg">
+            <br>
+          </ol>
+        </div>
+        <br>
+        <div style="background-color: #FFD27F;">
+          <br>
+          <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Repeated deletion of the root node in a heap is the basis a sorting algorithm called heap sort. The idea is that the most extreme element always rises to the top, therefore each time an element is removed from the heap it becomes sorted in comparison to the rest of the removed elements.
+          </p>
+          <br>
+        </div>
+        <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+          <br>
+          <p><u><b>Commonly Used In: </b></u></p>
+          <ul style="margin-left: 50px; font-weight: normal;">
+            <li>System memory management.</li>
+            <li>Statistical operations.</li>
+            <li>Implementing other data structures like priority queues and binary search trees.</li>
+          </ul>
+          <br>
+        </div>
+        <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+          <br>
+          <p><u><b>Other Similar Data Structures: </b></u></p>
+          <ul style="margin-left: 50px; font-weight: normal;">
+            <li><u>Treap:</u> A binary tree that contains two values per node: a key that reflects <a href="bst.html">BST</a format and a
+              priority
+              value that reflects heap format. This is in order to ensure balance and ease certain data retrieval
+              operations.</li>
+            <br>
+            <li><u>Splay Tree:</u> A type of self-adjusting <a href="bst.html">BST</a> where recently accessed nodes are moved upwards to
+              reduce
+              search times.</li>
+            <br>
+            <li><u>Skip List:</u> A sorted, multi-layered linked list used for efficient search, insertion, and deletion of
+          elements. It works by allowing "skips" to speed up searching for elements by jumping over certain irrelevant
+          nodes that waste steps.</li>
+            <br>
+            <li><u>Priority Queue:</u> A <a href="queue.html">queue</a> that assigns an intentional priority value to each item upon insertion. When a dequeue occurs, the item with the lowest priority value is deleted rather than the front. If two items are tied for lowest priority value, the one closest to the front is deleted. Heaps are often used to implement priority queues.</li>
+          </ul>
+          <br>
+        </div>
+</body>
+
+</html>

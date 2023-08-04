@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Binary Search</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/binarySearch/binarycoverpic.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Definition:</b></u>
+    A process designed to search for a specified value in an <u>ordered</u> list (this is important!). The search is
+    done by finding the middle element in the list and comparing it to the value being searched for. The list is then narrowed based on this calculation and the process is repeated until the specified target is found or the list size equals zero.
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life Example:</b></u>
+      You are reading a book with pages 1-400 and would like to turn to page 250. Instead of flipping through each individual page, you find the median page of the book (rounded down) which is page 200. You know that page 250 is greater than 200, so you change the range of pages to look for 250 in from 1-400 to 201-400. Finding the floored median again in the new range, you get 300, leaving you with a range of 201-299 due to 250 being less than 300. The median of the 201-299 range is 250, meaning that you have arrived at your target.
+    </p>
+    <br>
+  </div>
+  <div>
+    <br>
+    <p><u style="font-size: 20px;"><b>Procedure:</u></b></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Make sure the list is sorted in a defined order (ex: ascending or descending).
+        </li>
+        <img class="image" style="width: 700px;" src="../images/binarySearch/binaryfirstpic.jpg">
+        <li style="padding: 50px; font-weight: normal;">Find the median (middle) element of the list. If the list has an even size, use the lesser of the two middle elements.</li> <img class="image" style="width: 700px;"
+          src="../images/binarySearch/binarysecondpic.jpg">
+        <li style="padding: 50px; font-weight: normal;">Compare the median element to the target. If the median > target, eliminate all values to the right of the median (including the median). If the target > median, eliminate all values to the left of the median (including the median).</li> <img class="image"
+          style="width: 700px;" src="../images/binarySearch/binarycoverpic.jpg">
+        <li style="padding: 50px; font-weight: normal;">Repeat steps 2 and 3 until the target value is found as the median or until you run out of values in the list.</li> <img class="image"
+          style="width: 700px;" src="../images/binarySearch/binarypart1pic.jpg">
+        <img class="image"
+          style="width: 700px; padding-top: 10px;" src="../images/binarySearch/binarypart2pic.jpg">
+      </ol>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Binary search is much more efficient than linear search. In a list of 10,000 elements of sorted data, a binary search would take no more than 14 executions to find any piece of data in the list. A linear search could take up to 10,000.</p>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Searching for a value in an ordered dataset.</li>
+      <li>Efficiently looking for a value in a large dataset.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

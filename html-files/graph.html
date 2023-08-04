@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Graph</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/graph/graphcover.jpg">
+  <p style="text-align: center;"><b>An Unweighted Directed Graph</b></p>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u
+      style="font-size: 20px;"><b>Definition:</b></u>
+    A data structure consisting of nodes (data - see blue dots above) connected by edges (links - see grey arrows
+    above), representing relationships or connections between elements. There are 2 main characteristics of every graph:
+  <div style="padding-left: 50px;">
+    <ol>
+      <li><u>Weight:</u> A graph can be categorized as either weighted or unweighted. In a weighted graph, each edge
+        (link) is assigned a numerical value, such as distance or priority, representing a scalar unit between nodes of
+        data. On the other hand, an unweighted graph has no assigned weights for its edges.</li>
+      <br>
+      <li><u>Direction:</u> A graph is either directed, meaning that every edge points towards a node (think an arrow),
+        or undirected, meaning that edges don't have direction (think a straight line rather than an arrow).</li>
+    </ol>
+  </div>
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6; text-align: left;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;"><u style="font-size: 20px;"><b>Real Life
+          Example:</b></u>
+      Think of graphs as street maps, where the locations are nodes and the streets are edges. The locations can only be
+      accessed via the correct streets!
+    </p>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F;">
+    <br>
+    <p><u style="font-size: 20px;"><b>Basic Graph Operations:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Adding an edge and/or node. Here,
+          node G is added to the graph and connected to node F via an added edge.</li>
+        <img class="image" style="width: 700px;" src="../images/graph/graphadd.jpg">
+        <li style="font-weight: normal; padding: 50px;">Removing an edge. Since node G has no edges connected to it
+          after this removal, it is considered isolated. This means that it cannot be accessed until it is reconnected via
+          adding a new edge.</li>
+        <img class="image" style="width: 700px;" src="../images/graph/graphremoveedge.jpg">
+        <li style="font-weight: normal; padding: 50px;">Removing a node. Notice that any edges connected to/pointing towards the removed
+          node are removed as well.</li>
+        <img class="image" style="width: 700px;" src="../images/graph/graphremovenode.jpg">
+      </ol>
+    </div>
+    <br>
+  </div>
+  <div style="background-color: #ADD8E6; text-align: left;">
+    <p style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact:</b></u> Given all of the
+      different connections in most graphs, they can be very difficult to display. One of the most common solutions to this issue is implementing an adjacency matrix: </p>
+    <ul style="margin-left: 15%; font-weight: normal;">
+      <li style="padding-bottom: 20px;"><u>Adjacency Matrix:</u> A 2D <a href="array.html">array</a> representing connections between nodes
+        within a graph. If two nodes are connected in a proper direction via an edge, a 1 is placed in the box where the
+        two nodes meet in the array. If not, a 0 is placed in the box. The nodes listed on the left of the box represent
+        the starting node and the nodes listed on top of the box represent the ending node. For example, the existence
+        of an edge pointing from D to B results in the D/B box in the last row containing a 1, but not the B/D box in
+        the second row. If the graph was undirected instead of directed, a 1 would be placed in both of those boxes.
+        <br>
+        <br>
+        <b style="margin-left: 15%;">Note:</b> For weighted graphs, the weight from one node to another is placed in the
+        box, not a 1.
+      </li>
+      <img class="image" style="width: 700px;" src="../images/graph/graphmatrix.jpg">
+      <br>
+    </ul>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>GPS systems.</li>
+      <li>Network relationship modeling.</li>
+      <li>Robotics.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Insertion Sort</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/insertionSort/insertionsortstep4.jpg">
+  <br>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u
+      style="font-size: 20px;"><b>Definition:</b></u>
+    A process designed to sort an unordered set of linear data into either ascending order (lowest to highest) or
+    descending order (highest to lowest). This is done by taking one element at a time (starting from the second
+    element) and shifting it leftwards until it is in the designated order with all elements to the left of its initial
+    position. <u>This involves moving any element that is passed by the shifted element to the right one spot in order to create room for insertion.</u> See an example of the procedure below.
+    <br>
+    <br>
+  </p>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p><u style="font-size: 20px;"><b>Procedure for ASCENDING Insertion Sort:</b></u></p>
+    <div style="margin-left: 50px;">
+      <ol style="line-height: 2; font-size: 16px;">
+        <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Locate the second element. Compare it
+          to the value left of it, swapping elements if needed to get the first two elements into ascending order.
+        </li>
+        <img class="image" style="width: 700px;" src="../images/insertionSort/insertionsortstep1.jpg">
+        <li style="padding: 50px; font-weight: normal;">Repeat step 1 but with the third element and the two elements to
+          the left of it, inserting where proper in the already sorted part of the list.</li> <img class="image" style="width: 700px;"
+          src="../images/insertionSort/insertionsortstep2.jpg">
+        <li style="padding: 50px; font-weight: normal;">Do the same for the fourth, fifth, and sixth elements, sliding
+          them leftwards (and the elements it passes over rightwards) until they are inserted into the correct spot.</li>
+        <img class="image" style="width: 700px;" src="../images/insertionSort/insertionsortstep3.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/insertionSort/insertionsortstep4.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/insertionSort/insertionsortstep5.jpg">
+        <br>
+        <img class="image" style="width: 700px;" src="../images/insertionSort/insertionsortstep6.jpg">
+        <br>
+      </ol>
+    </div>
+    <br>
+    <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #1:</b></u> The theory behind
+      insertion sort is used to implement <a href="shellSort.html">shell sort</a>, another popular (and more efficient) sorting algorithm.
+      <br>
+      <br>
+      <u style="font-size: 20px;"><b>Fun Fact #2: </b></u> Similar to <a href="selectionSort.html">selection sort</a>, insertion sort is extremely slow for large datasets.
+    </p>
+    <br>
+  </div>
+  <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+    <br>
+    <p><u><b>Commonly Used In: </b></u></p>
+    <ul style="margin-left: 50px; font-weight: normal;">
+      <li>Sorting very small datasets.</li>
+    </ul>
+    <br>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>No Code Data Structures</title>
+  <link rel="icon" href="../logos/nocodebox.jpg">
+  <link href="../lessonStyle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button style="height: 30px; width: 60px;"><a href="../index.html">Home</a></button>
+  <h1 class="title">Linked List</h1>
+  <br>
+  <br>
+  <img class="image" src="../images/linkedlist/llcover.jpg">
+  <p style="text-align: center;"><b>A Singly Linked List</b></p>
+  <br>
+  <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u
+      style="font-size: 20px;"><b>Definition:</b></u>
+    A collection of elements stored together in a linked, linear format where each piece of data contains a reference to
+    the next piece of data in the list (or in the case of a doubly linked list, next and previous). Linked Lists are not
+    indexed like <a href="array.html">arrays</a>. There are 3 main types of Linked Lists:
+  <div style="text-align: center;">
+    <ol style="padding-left: 20%; display: inline-block; text-align: left;">
+      <li style="padding-left: 5%;"><u>Singly Linked List:</u> Each piece of data is linked to the piece of data in
+        front of it.</li>
+      <br>
+      <img class="image" style="width: 400px;" src="../images/linkedlist/llcover.jpg">
+      <br>
+      <li style="padding-left: 5%;""><u>Doubly Linked List:</u> Each piece of data is linked to the piece of data in front of it AND behind it.</li>
+      <br>
+      <img class=" image" style="width: 400px;" src="../images/linkedlist/doublyll.jpg">
+        <br>
+      <li style="padding-left: 5%;""><u>Circularly Linked List:</u> A singly Linked List but where the last element of the list is linked back to the first element to create a cycle.
+      </li>
+      <br>
+      <img class=" image" style="width: 400px;" src="../images/linkedlist/circlell.jpg">
+    </ol>
+  </div>
+  </p>
+  <br>
+  <div style="background-color: #ADD8E6;">
+    <br>
+    <p style="font-family: 'Times New Roman', Times, serif;" class="subtitle"><u style="font-size: 20px;"><b>Real Life
+          Example:</b></u>
+      A conga line! Everyone in the line is connected to the person in front of them with their hands. When someone
+      joins or leaves the line, people affected by the change must reconnect their hands so that the line stays intact.
+    </p>
+    <br>
+    <div style="background-color: #FFD27F;">
+      <br>
+      <br>
+      <p><b><u style="font-size: 20px;">Note:</u></b> The first node in a linked list (the one farthest to the left with
+        no other nodes pointing to it) is called the head. The last node is a linked list (the one farthest to the right
+        that points to null) is called the tail.</p>
+      <br>
+      <br>
+    </div>
+    <div>
+      <br>
+      <p><u style="font-size: 20px;"><b>Basic Singly Linked List Operations:</b></u></p>
+      <div style="margin-left: 50px;">
+        <ol style="line-height: 2; font-size: 16px;">
+          <li style="font-weight: normal; padding-bottom: 50px; padding-left: 50px;">Adding an element. By default,
+            adding an element to a singly linked list places it at the end of the list, making it the new tail. The
+            previous tail is then reconnected to point towards the newly added tail. If you would like to add the node
+            at another location, see operation #2. <u>See the fun fact #2 at the bottom for an explanation about the
+              "null" reference following the tail.</u></li>
+          <img class="image" style="width: 700px;" src="../images/linkedlist/lladd.jpg">
+          <li style="padding: 50px; font-weight: normal;">Inserting an element. The node to the left of the insertion
+            spot is reconnected to the inserted note and the node to the right of the insertion spot is now pointed to
+            by the inserted node.</li> <img class="image" style="width: 700px;" src="../images/linkedlist/llinsert.jpg">
+          <li style="padding: 50px; font-weight: normal;">Removing an element. The element to the left of the removal
+            spot is reconnected to the element to the right of the removal spot.</li> <img class="image"
+            style="width: 700px;" src="../images/linkedlist/llremove.jpg">
+          <li style="padding: 50px; font-weight: normal;">Changing an element. The element is simply changed in place, commonly referred to as "setting".</li>
+          <img class="image"
+            style="width: 700px;" src="../images/linkedlist/llset.jpg">
+          <br>
+          <br>
+        </ol>
+      </div>
+      <div style="background-color: #FFD27F;">
+        <br>
+        <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #1:</b></u> Unlike in a
+          <a href="graph.html">graph</a>, a node in a Linked List consists of the data AND the arrow(s) stemming from it
+          (but not the ones pointing towards it).</p>
+        <br>
+        <p class="subtitle" style="font-weight: normal;"><u style="font-size: 20px;"><b>Fun Fact #2:</b></u> In a singly
+          linked list, the tail node points towards "null" (meaning empty) to signify the end of the Linked List. This
+          is necessary because searching a Linked List is done by following the "arrows" node by node (much slower than
+          in an array) and without "null", there is no instruction for the search to stop once it reaches the final
+          node. The same goes for doubly linked lists except a "null" value is pointed to by the tail AND the head.</p>
+        <br>
+      </div>
+    </div>
+    <div style="background-color: #ADD8E6; padding-left: 50px;font-size: 18px; line-height: 2;">
+      <br>
+      <p><u><b>Commonly Used In: </b></u></p>
+      <ul style="margin-left: 50px; font-weight: normal;">
+        <li>Managing easy insertion/deletion in large datasets.</li>
+        <li>Computer file management systems.</li>
+        <li>Implementing other data structures.</li>
+      </ul>
+      <br>
+    </div>
+    <div style="background-color: #FFD27F; padding-left: 50px;font-size: 18px; line-height: 2;">
+      <br>
+      <p><u><b>Other Similar Data Structures: </b></u></p>
+      <ul style="margin-left: 50px; font-weight: normal;">
+        <li><u>Linked Hash Map:</u> A <a href="hashtable.html">hash map</a> where key/value pairs are linked together
+          (via a Linked List) based on the order they were inserted regardless of assigned storage location. </li>
+        <br>
+        <li><u>Skip List:</u> A sorted, multi-layered linked list used for efficient search, insertion, and deletion of
+          elements. It works by allowing "skips" to speed up searching for elements by jumping over certain irrelevant
+          nodes that waste steps.</li>
+        <br>
+        <li><u>Linked Deque:</u> A <a href="deque.html">deque</a> in which elements are linked to their
+          neighbors via a doubly linked list.</li>
+      </ul>
+      <br>
+    </div>
+</body>
+
+</html>
